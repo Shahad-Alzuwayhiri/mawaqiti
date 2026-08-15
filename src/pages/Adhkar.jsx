@@ -27,24 +27,25 @@ function DhikrCard({ zekr }) {
 
       {/* الصوت */}
       {zekr.audio && (
-        <div className="adhkar-audio mt-3">
+  <div className="adhkar-audio mt-3">
 
-          <p className="audio-title">
-            <i className="bi bi-volume-up-fill ms-2"></i>
-            الاستماع للذكر
-          </p>
+    <p className="audio-title">
+      <i className="bi bi-volume-up-fill ms-2"></i>
+      الاستماع للذكر
+    </p>
 
-          <audio
-            key={zekr.audio}
-            controls
-            className="w-100"
-            src={zekr.audio}
-          >
-            المتصفح لا يدعم تشغيل الصوت.
-          </audio>
+    <audio
+      key={zekr.audio}
+      controls
+      preload="metadata"
+      className="w-100"
+      src={`https://mawaqiti-sa.netlify.app${zekr.audio}`}
+    >
+      المتصفح لا يدعم تشغيل الصوت.
+    </audio>
 
-        </div>
-      )}
+  </div>
+)}
 
       {/* معلومات التكرار */}
       <div className="dhikr-counter-area mt-4">
