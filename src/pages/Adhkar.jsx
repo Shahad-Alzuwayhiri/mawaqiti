@@ -34,15 +34,18 @@ function DhikrCard({ zekr }) {
       الاستماع للذكر
     </p>
 
-    <audio
-      key={zekr.audio}
-      controls
-      preload="metadata"
-      className="w-100"
-      src={`https://mawaqiti-sa.netlify.app${zekr.audio}`}
-    >
-      المتصفح لا يدعم تشغيل الصوت.
-    </audio>
+   <audio
+  key={zekr.audio}
+  controls
+  preload="none"
+  className="w-100"
+>
+  <source
+    src={`https://mawaqiti-sa.netlify.app${zekr.audio}`}
+    type="audio/mpeg"
+  />
+  المتصفح لا يدعم تشغيل الصوت.
+</audio>
 
   </div>
 )}
